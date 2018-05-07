@@ -48,6 +48,7 @@ export default {
                     }
                     data.push(tmp)
                 })
+                console.log(data)
                 map = new Highcharts.Map('highmaps', {
                     chart: {
                         events: {
