@@ -1,5 +1,7 @@
 # vue_highcharts_demo
 
+* 参考：http://blog.jianshukeji.com/2017/09/use-highcharts-with-vue/
+
 > A Vue.js project
 
 ## Build Setup
