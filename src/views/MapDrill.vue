@@ -102,7 +102,7 @@ export default {
                         text: '中国地图'
                     },
                     subtitle: {
-                        text: '<a href="https://www.hcharts.cn/mapdata">点击查看地图数据及详情，注意县级数据为收费数据，如果您有需要，请联系我们购买</a>'
+                        // text: '<a href="https://www.hcharts.cn/mapdata">点击查看地图数据及详情</a>'
                     },
                     mapNavigation: {
                         enabled: true,
@@ -116,13 +116,16 @@ export default {
                         pointFormat: '<tr><td>全称</td><td>{point.properties.fullname}</td></tr>' +
                         '<tr><td>行政编号</td><td>{point.properties.areacode}</td></tr>' +
                         '<tr><td>父级</td><td>{point.properties.parent}</td></tr>' +
-                        '<tr><td>经纬度</td><td>{point.properties.longitude},{point.properties.latitude}</td></tr>',
+                        '<tr><td>经纬度</td><td>{point.properties.longitude},{point.properties.latitude}</td></tr>' +
+                        '<tr><td>值</td><td>{point.value}</td></tr>',
                         footerFormat: '</table>'
                     },
                     colorAxis: {
                         min: 0,
                         minColor: '#fff',
+                        // minColor: 'blue',
                         maxColor: '#006cee',
+                        // maxColor: 'red',
                         labels: {
                             style: {
                                 'color': 'red', 'fontWeight': 'bold'
@@ -149,8 +152,7 @@ export default {
                                 // fontFamily: '宋体',
                                 textShadow: false,
                                 // 去掉阴影
-                                textOutline: 'none',
-                                textDecoration: 'none'
+                                textOutline: 'none'
                             }
                         }
                     }],
@@ -166,8 +168,9 @@ export default {
 </script>
 
 <style lang="stylus" type="text/stylus">
-.box
-    width: 80%;
+.container
+    width: 50%;
+    height: 400px;
     svg
         g
             g
