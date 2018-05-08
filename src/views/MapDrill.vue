@@ -78,7 +78,11 @@ export default {
                                             data: data,
                                             dataLabels: {
                                                 enabled: true,
-                                                format: '{point.name}'
+                                                format: '{point.name}',
+                                                style: {
+                                                    // 去掉阴影
+                                                    textOutline: 'none'
+                                                }
                                             }
                                         })
                                         map.setTitle({
@@ -134,6 +138,20 @@ export default {
                             hover: {
                                 color: '#a4edba'
                             }
+                        },
+                        dataLabels: {
+                            enabled: true,
+                            formatter: function () {
+                                return this.point.name
+                            },
+                            style: {
+                                // color: '#fff',
+                                // fontFamily: '宋体',
+                                textShadow: false,
+                                // 去掉阴影
+                                textOutline: 'none',
+                                textDecoration: 'none'
+                            }
                         }
                     }],
                     credits: {
@@ -147,8 +165,12 @@ export default {
 }
 </script>
 
-<style>
-.box {
-    width: 60%;
-}
+<style lang="stylus" type="text/stylus">
+.box
+    width: 80%;
+    svg
+        g
+            g
+                text
+                    text-decoration none !important
 </style>
